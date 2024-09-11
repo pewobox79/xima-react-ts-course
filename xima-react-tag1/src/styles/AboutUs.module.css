@@ -1,0 +1,11 @@
+.aboutUsTitle {
+    color: purple;
+    font-weight: bold;
+    font-size: 5rem;
+}
+
+.aboutUsParagraph {
+    color: red;
+    font-weight: bold;
+    text-decoration: line-through;
+}
