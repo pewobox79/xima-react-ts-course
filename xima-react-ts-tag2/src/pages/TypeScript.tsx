@@ -8,7 +8,7 @@ export default function TypeScript() {
         <Button
             style={{
                 backgroundColor: "red",
-                color: "red",
+                color: "white",
                 padding: "40px",
                 margin: "20px"
             }}

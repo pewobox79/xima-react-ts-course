@@ -1,24 +1,28 @@
 
-type Colors = "red" | "yellow" | "blue"
+//type Colors = "red" | "yellow" | "blue"
 
-type ButtonTypes ={
+/* type ButtonTypes ={
     style:{
         backgroundColor: Colors,
         color: "white" | "black",
         padding?: [number, number?, number?, number?], 
         margin?: number[]
     },
-}
+    action?: ()=>void
+} */
 
 
 type ButtonTypesWithCSSProperties = {
-    style: React.CSSProperties & {color: Colors}
+    style?: React.CSSProperties & {color: "white" | "black"}
+    action?: ()=>void,
+    text: string
 }
 
-export default function Button({style}:ButtonTypesWithCSSProperties) {
+export default function Button({style, action, text ="Save"}:ButtonTypesWithCSSProperties) {
 
     return <button
-        style={style}>
-        Click mich
+        style={style} 
+        onClick={action}>
+        {text}
     </button>
 }
