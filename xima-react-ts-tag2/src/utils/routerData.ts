@@ -22,5 +22,17 @@ export const routerData =[
         title: "Users",
         href: "/users",
 
+    },
+    {
+        id: "2333339898742-2423",
+        title: "Forms",
+        href: "/forms",
+
+    },
+    {
+        id: "742-2423",
+        title: "BLOG",
+        href: "/blog",
+
     }
 ]
