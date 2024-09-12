@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 
 function AboutUs() {
 
-const [number, setNumber] = useState(0)
+//const [number, setNumber] = useState(0)
 
   useEffect(() => {
 
@@ -17,14 +17,14 @@ const [number, setNumber] = useState(0)
       clearInterval(interval)
     } */
 
-  }, [number])
+  }, [])
 
 
 
   return (
     <div>
       <h1>UseEffect Exercise </h1>
-    counter: {number}afdsdaffdaad
+    counter: [number]afdsdaffdaad
     afasdfasfdasfd
     
     </div>

@@ -5,12 +5,13 @@ function UsersOverview() {
 
     const [users, setUsers] = useState([])
     const [isLoading, setIsLoading] = useState(false)
+    const [error, setError] = useState(false)
 
 
     useEffect(() => {
 
         setIsLoading(true)
-        fetch('https://jsonplaceholder.typicode.com/users')
+        fetch('https://jsonplaceholder.typicom/users')
             .then(res => res.json())
             .then(data => {
                 setTimeout(() => {
@@ -19,11 +20,21 @@ function UsersOverview() {
                 }, 2000)
 
             })
+            .catch(err=>{
+                console.log(err)
+                setUsers([]) 
+                setError(true) 
+                   
+            }).finally(()=>{
+                setIsLoading(false)
+            })
+            
 
     }, [])
 
+    console.log("users", users)
 
-    const UserListing = users.map((user: { email: string, username: string, id: number }) => {
+    const UserListing = users && users?.map((user: { email: string, username: string, id: number }) => {
         return <UserItem key={user.id} {...user} />
     })
 
@@ -31,7 +42,8 @@ function UsersOverview() {
     return (
         <div>
             <p style={{display: isLoading ? "block": "none"}}>loading....</p>
-            {UserListing}
+            {error ? "":UserListing}
+            {error && <h3>error</h3>}
         </div>
     )
 }

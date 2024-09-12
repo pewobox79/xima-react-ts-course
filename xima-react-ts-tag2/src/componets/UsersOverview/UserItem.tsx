@@ -4,10 +4,10 @@ import { useState } from "react"
 type UserItemType = {
     email: string,
     username: string,
-    website: string,
-    phone: string,
-    address: {
-        city: string
+    website?: string,
+    phone?: string,
+    address?: {
+        city?: string
     }
 
 }
@@ -27,7 +27,7 @@ function UserItem(props: UserItemType) {
                 <div id="moreInfo">
                     <p>Website: {props.website}</p>
                     <p>Phone: {props.phone}</p>
-                    <p>City: {props.address.city}</p>
+                    <p>City: {props.address?.city}</p>
                 </div>}
         </div>
     )

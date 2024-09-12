@@ -12,6 +12,7 @@ export default function TypeScript() {
                 padding: "40px",
                 margin: "20px"
             }}
+            text="hallo"
 
         />
     </div>
