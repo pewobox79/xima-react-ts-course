@@ -10,5 +10,17 @@ export const routerData =[
         title: "About Us",
         href: "/aboutus",
         component: "AboutUs"
+    },
+    {
+        id: "2987908742-2423",
+        title: "TypeScript",
+        href: "/typescript",
+    
+    },
+    {
+        id: "29879898742-2423",
+        title: "Users",
+        href: "/users",
+
     }
 ]

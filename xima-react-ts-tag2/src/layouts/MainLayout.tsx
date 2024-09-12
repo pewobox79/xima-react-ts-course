@@ -7,7 +7,9 @@ export default function MainLayout (){
     return <>
 
     <Header/>
+    <main style={{minHeight: 500}}>
     <Outlet/>
+    </main>
    <Footer/>
 
     
